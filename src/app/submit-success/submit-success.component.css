@@ -1,0 +1,37 @@
+/* Whole page */
+.success__page{
+height:100vh
+}
+iframe{
+    width:200px;
+    height:200px;
+}
+h2{
+    font-weight: 600;
+font-size: 1.563em;
+line-height: 2.438em;
+text-transform: uppercase;
+color: #202020;
+}
+p{
+font-weight: 600;
+font-size: 0.938em;
+line-height: 1.813em;
+text-align: center;
+color: #6A6A6A;
+}
+@media screen and (max-width: 500px) {
+    iframe{
+        width:100px;
+        height:100px;
+    }
+    h2{
+    font-size: 1em;
+    }
+    p , button{
+    font-size: 0.6em;
+    }
+    button{
+        width:100%;
+    }
+}

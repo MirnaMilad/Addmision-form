@@ -1,0 +1,73 @@
+* {
+    font-style: normal;
+}
+
+.form-label {
+    font-size: 0.875em;
+    line-height: 1.813em;
+    font-weight: 600;
+}
+
+.help-block {
+    color: #d10707;
+    font-weight: 700;
+    font-size: 0.75em;
+}
+
+button {
+    background: #AB0202;
+    border-radius: 0.625em;
+    width:20%;
+}
+
+button:hover {
+    background: #AB0202;
+    opacity: 0.8;
+}
+
+.btn:disabled {
+    background: #AB0202;
+    opacity: 0.6
+}
+
+.form-control:focus {
+    border: none;
+    box-shadow: 0 0 0.25rem black
+}
+
+
+
+.form-check-input:checked {
+    background-color: #AB0202;
+    border-color: #AB0202;
+}
+
+.form-check-input:focus {
+    box-shadow: none;
+}
+
+::placeholder {
+    color: #D2D2D2;
+}
+
+
+
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+
+@media screen and (max-width: 1000px) {
+    button{
+        width:50%;
+    }
+}
+@media screen and (max-width: 700px) {
+    button{
+        width:100%;
+    }
+}

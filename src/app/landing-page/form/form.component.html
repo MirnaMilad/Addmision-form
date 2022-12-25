@@ -1,0 +1,329 @@
+<section id="apply">
+  <form [formGroup]="addmisionForm" (ngSubmit)="onSubmit()">
+    <!-- Personal information -->
+    <h1 class="title mb-0"  data-aos="fade-right">Personal information</h1>
+    <div class="row justify-content-evenly p-4">
+      <!-- Name input -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Full Name <span class="help-block">*</span></label
+          >
+          <input
+            class="form-control w-md-75 w-xs-100"
+            placeholder="Your full name"
+            type="text"
+            id="name"
+            formControlName="name"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+          <div
+          class="position-absolute"
+            *ngIf="
+              addmisionForm.get('name').touched &&
+              addmisionForm.get('name').invalid
+            "
+          >
+            <span
+              *ngIf="addmisionForm.get('name').errors?.['notAlphabet']"
+              class="help-block"
+              >{{ notValid }}</span
+            >
+            <span
+              *ngIf="addmisionForm.get('name').errors?.required"
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- Email input -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Email <span class="help-block">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your email address"
+            id="email"
+            formControlName="email"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+          <div
+          class="position-absolute"
+            *ngIf="
+              addmisionForm.get('email').touched &&
+              addmisionForm.get('email').invalid
+            "
+          >
+            <span
+              *ngIf="addmisionForm.get('email').errors?.['notEmail']"
+              class="help-block"
+              >{{ notValid }}</span
+            >
+            <span
+              *ngIf="addmisionForm.get('email').errors?.required"
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+        </div>
+        </div>
+      </div>
+      <!-- Phone number -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Phone number <span class="help-block">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your phone number"
+            id="phoneNumber"
+            formControlName="phoneNumber"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+          <div
+          class="position-absolute"
+            *ngIf="
+              addmisionForm.get('phoneNumber').touched &&
+              addmisionForm.get('phoneNumber').invalid
+            "
+          >
+            <span
+              *ngIf="addmisionForm.get('phoneNumber').errors?.['notPhone']"
+              class="help-block"
+              >{{ notValid }}</span
+            >
+            <span
+              *ngIf="addmisionForm.get('phoneNumber').errors?.required"
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+          </div>
+
+
+
+
+
+        </div>
+      </div>
+      <!-- Date of birth -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Date of birth <span class="help-block">*</span></label
+          >
+          <input
+            type="date"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your date of birth"
+            id="dateOfBirth"
+            formControlName="dateOfBirth"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+          <div class="position-absolute">
+            <span
+              *ngIf="
+                addmisionForm.get('dateOfBirth').invalid &&
+                addmisionForm.get('dateOfBirth').touched
+              "
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Address -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label">Address</label>
+          <input
+            type="text"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your Home address"
+            id="address"
+            formControlName="address"
+          />
+        </div>
+      </div>
+
+      <!-- Marital status -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3 h-100 d-flex flex-column">
+          <p class="form-label">
+            Marital status <span class="help-block">*</span>
+          </p>
+          <div class="d-flex mt-2">
+            <div class="form-check me-5">
+              <input
+                type="radio"
+                class="form-check-input"
+                value="single"
+                id="single"
+                name="maritalStatus"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="single">Single</label>
+            </div>
+            <div class="form-check">
+              <input
+                type="radio"
+                class="form-check-input"
+                value="married"
+                id="married"
+                name="maritalStatus"
+                formControlName="maritalStatus"
+              />
+              <label class="form-check-label" for="married">Married</label>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Job Information -->
+    <h1 class="title mt-3 mb-0"  data-aos="fade-right">Job Information</h1>
+    <div class="row justify-content-evenly p-4">
+      <!-- Position -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Position <span class="help-block">*</span></label
+          >
+          <input
+            type="text"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your Position"
+            id="position"
+            formControlName="position"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+          <div class="position-absolute"
+            *ngIf="
+              addmisionForm.get('position').touched &&
+              addmisionForm.get('position').invalid
+            "
+          >
+            <span
+              *ngIf="addmisionForm.get('position').errors?.['notAlphabet']"
+              class="help-block"
+              >{{ notValid }}</span
+            >
+            <span
+              *ngIf="addmisionForm.get('position').errors?.required"
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Availability date -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3" data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Availability date <span class="help-block">*</span></label
+          >
+          <input
+            type="date"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your Availability date"
+            id="availabilityDate"
+            formControlName="availabilityDate"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+            <div  class="position-absolute">
+            <span
+              *ngIf="
+                addmisionForm.get('availabilityDate').invalid &&
+                addmisionForm.get('availabilityDate').touched
+              "
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- Expected salary -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >Expected salary <span class="help-block">*</span></label
+          >
+          <input
+            type="number"
+            class="form-control  w-md-75 w-xs-100"
+            placeholder="Your Expected salary"
+            id="salary"
+            formControlName="salary"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+            <div  class="position-absolute">
+            <span
+              *ngIf="
+                addmisionForm.get('salary').invalid &&
+                addmisionForm.get('salary').touched
+              "
+              class="help-block"
+              >{{ required }}</span>
+          </div>
+        </div>
+      </div>
+      </div>
+      <!-- CV/Resume -->
+      <div class="col-lg-5 col-md-6 col-sm-12 pb-3"  data-aos="flip-down">
+        <div class="mb-3">
+          <label class="form-label"
+            >CV/Resume <span class="help-block">*</span></label
+          >
+          <input
+            type="file"
+            class="form-control  w-md-75 w-xs-100"
+            id="uploadCv"
+            formControlName="uploadCv"
+          />
+          <!-- Error message -->
+          <div class="position-relative">
+          <div  class="position-absolute"
+            *ngIf="
+              addmisionForm.get('uploadCv').touched &&
+              addmisionForm.get('uploadCv').invalid
+            "
+          >
+            <span
+              *ngIf="addmisionForm.get('uploadCv').errors?.required"
+              class="help-block"
+              >{{ required }}</span
+            >
+          </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Submit button -->
+    <div class="d-flex justify-content-center">
+      <button
+        class="btn text-light my-5 py-2 px-5"
+        [disabled]="!addmisionForm.valid"
+      >
+        Submit
+      </button>
+    </div>
+  </form>
+</section>

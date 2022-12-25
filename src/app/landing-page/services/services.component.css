@@ -1,0 +1,13 @@
+.service__item{
+    height:10vh;
+    padding: 1.25em;
+    display:flex;
+    align-items: center;
+    column-gap: 0.7rem;
+    border-radius: 0.313em;
+}
+.service__item h3{
+    color:#0a1d37;
+    font-size:1.1rem;
+    font-weight: 600;
+}

@@ -1,0 +1,19 @@
+.img {
+    height: 100vh;
+    filter: brightness(60%);
+    z-index: 0;
+    background-image: url("../../../assets/pexels-fauxels-3183150.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    font-size: 4.375em;
+}
+@media screen and (max-width: 500px) {
+    h1 {
+        font-size: 2em;
+    }
+}
